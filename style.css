@@ -155,7 +155,7 @@ h6 {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 350px;
+    width: 100%;
     z-index: 100;
     background-color: #fff;
     padding: 15px;
@@ -512,16 +512,16 @@ h6 {
   font-size: 50px;
   color: #fff;
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 80px;
 }
-.explore-main {
+.explore .slick-track {
   display: flex;
-  transition: all 0.2s linear;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 .explore-img {
-  width: 405px;
-  max-height: 257px;
+  max-width: 405px;
+  max-height: 240px;
   margin-left: 31px;
   border-radius: 10px;
   object-fit: cover;
@@ -530,42 +530,49 @@ h6 {
 .explore-img:first-child {
   margin-left: 0;
 }
-.explore-arrow {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0 50px;
-  margin-bottom: 30px;
+.explore .slick-prev {
+  position: absolute;
+  top: -60px;
+  left: 46%;
+  z-index: 10;
 }
-.explore-next, .explore-prev {
-  cursor: pointer;
-  padding: 10px;
-  background-color: #939393;
-  color: #fff;
+.explore .slick-next {
+  position: absolute;
+  top: -60px;
+  left: 51%;
+  z-index: 10;
+}
+.explore .slick-arrow {
+  font-size: 25px;
   border-radius: 10px;
+  color: #dd2242;
+  background-color: #fff;
   transition: all 0.2s linear;
 }
-.explore-next:hover, .explore-prev:hover {
-  background-color: #dd2242;
+.explore .slick-arrow:hover {
   color: #fff;
+  background-color: #dd2242;
 }
-.explore-dots {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.explore .slick-arrow i {
+  padding: 10px;
 }
-.explore-dot-item {
-  width: 15px;
-  height: 15px;
-  margin-left: 16px;
+.explore .slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 60px);
+  bottom: 0;
+  display: flex !important;
+  gap: 0 16px;
+}
+.explore .slick-dots button {
+  font-size: 0;
+  width: 19px;
+  height: 19px;
   border-radius: 50px;
-  background-color: #747677;
-  cursor: pointer;
+  background-color: #85a3b2;
   transition: all 0.2s linear;
 }
-.explore-dot-item.active {
+.explore .slick-dots .slick-active button {
   width: 50px;
   background-color: #dd2242;
 }
@@ -621,6 +628,14 @@ h6 {
   overflow: hidden;
   word-break: break-all;
 }
+@media screen and (max-width: 1024px) {
+  .explore .slick-prev {
+    left: 44%;
+  }
+  .explore .slick-next {
+    left: 53%;
+  }
+}
 @media only screen and (max-width: 46.1875em) {
   .explore-bottom {
     padding: 72px 0;
@@ -637,6 +652,9 @@ h6 {
   }
   .explore-number-item {
     width: 100%;
+  }
+  .explore .slick-prev {
+    left: 40%;
   }
 }
 
@@ -1209,7 +1227,11 @@ h6 {
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.2s linear;
+  cursor: zoom-out;
   /* Mobile: width < 740px */
+}
+.modal.active {
+  display: block;
 }
 .modal-close {
   position: absolute;
@@ -1236,6 +1258,10 @@ h6 {
   .modal-content {
     width: 100%;
     height: 300px;
+  }
+  .modal-close {
+    top: 30px;
+    right: 40px;
   }
 }
 

@@ -46,6 +46,13 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
     <!-- Css -->
     <link
       rel="stylesheet"
@@ -70,7 +77,7 @@
             />
           </a>
           <ul class="nav-menu js-menu">
-            <i class="fa-solid fa-rectangle-xmark nav-close"></i>
+            <i class="fa-solid fa-rectangle-xmark nav-close js-close"></i>
             <li class="nav-link">
               <a href="#!">Destinations</a>
             </li>
@@ -137,7 +144,7 @@
                 alt=""
                 class="hero-img"
               />
-              <i class="fa-solid fa-play hero-play"></i>
+              <i class="fa-solid fa-play hero-play js-open-video"></i>
             </div>
           </div>
         </div>
@@ -238,10 +245,6 @@
         <div class="explore-top">
           <div class="container">
             <h2 class="explore-heading">Explore Our Secrets</h2>
-            <div class="explore-arrow">
-              <i class="fa-solid fa-chevron-left explore-prev"></i>
-              <i class="fa-solid fa-chevron-right explore-next"></i>
-            </div>
             <div class="explore-main">
               <img
                 src="./images/Explore 1.png"
@@ -274,32 +277,6 @@
                 class="explore-img"
               />
             </div>
-            <ul class="explore-dots">
-              <li
-                class="explore-dot-item active"
-                data-index="0"
-              ></li>
-              <li
-                class="explore-dot-item"
-                data-index="1"
-              ></li>
-              <li
-                class="explore-dot-item"
-                data-index="2"
-              ></li>
-              <li
-                class="explore-dot-item"
-                data-index="3"
-              ></li>
-              <li
-                class="explore-dot-item"
-                data-index="4"
-              ></li>
-              <li
-                class="explore-dot-item"
-                data-index="4"
-              ></li>
-            </ul>
           </div>
         </div>
         <div class="explore-bottom">
@@ -378,7 +355,7 @@
               src="./images/Video 1.png"
               alt=""
             />
-            <i class="fa-solid fa-play video-play"></i>
+            <i class="fa-solid fa-play video-play js-open-video"></i>
           </div>
           <div class="video-list">
             <div class="video-item">
@@ -387,7 +364,7 @@
                   src="./images/Video 2.png"
                   alt=""
                 />
-                <i class="fa-solid fa-play video-item-play"></i>
+                <i class="fa-solid fa-play video-item-play js-open-video"></i>
               </div>
               <div class="video-content">
                 <div class="video-title">In The Country</div>
@@ -403,7 +380,7 @@
                   src="./images/Video 3.png"
                   alt=""
                 />
-                <i class="fa-solid fa-play video-item-play"></i>
+                <i class="fa-solid fa-play video-item-play js-open-video"></i>
               </div>
               <div class="video-content">
                 <div class="video-title">In The City</div>
@@ -508,7 +485,7 @@
                       alt=""
                       class="getting-img"
                     />
-                    <i class="fa-solid fa-play getting-play"></i>
+                    <i class="fa-solid fa-play getting-play js-open-video"></i>
                   </div>
                   <div class="getting-subcontent-right">
                     <h3 class="getting-subcontent-heading">Travelling there</h3>
@@ -584,8 +561,8 @@
       <!-- *** Footer End *** -->
 
       <!-- Modal Start -->
-      <div class="modal">
-        <i class="fa-sharp fa-solid fa-xmark modal-close"></i>
+      <div class="modal js-modal">
+        <i class="fa-sharp fa-solid fa-xmark modal-close js-modal-close"></i>
         <div class="modal-content">
           <iframe
             width="100%"
@@ -603,6 +580,18 @@
     <!-- --- Wrapper End --- -->
 
     <!-- --- JavaScript Start --- -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="./js/main.js"></script>
     <!-- --- JavaScript End --- -->
   </body>
